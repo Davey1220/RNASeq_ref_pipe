@@ -1,0 +1,6 @@
+C1	C1_1.fq	C1_2.fq
+C2	C2_1.fq	C2_2.fq
+C3	C3_1.fq	C3_2.fq
+S1	S1_1.fq	S1_2.fq
+S2	S2_1.fq	S2_2.fq		
+S3	S3_1.fq	S3_2.fq

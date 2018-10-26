@@ -1,0 +1,94 @@
+#############################################################################################
+[32m##### Step_1: Lets's first make index for the reference genome #####[0m
+#############################################################################################
+[32m The bowtie2-build has been installed and it's path is: /usr/local/bin/bowtie2-build [0m
+2018年 10月 26日 星期五 19:05:31 CST Start indexing the reference genome
+2018年 10月 26日 星期五 19:05:41 CST Indexing done...
+#############################################################################################
+[32m##### Step_2: Mapping the clean data on the reference genome #####[0m
+#############################################################################################
+[32m The tophat2 has been installed and it's path is: /usr/local/bin/tophat2 [0m
+2018年 10月 26日 星期五 19:05:41 CST Start mapping the clean data on the reference genome
+C1
+C1_1.fq
+C1_2.fq
+C2
+C2_1.fq
+C2_2.fq
+C3
+C3_1.fq
+C3_2.fq
+S1
+S1_1.fq
+S1_2.fq
+S2
+S2_1.fq
+S2_2.fq
+S3
+S3_1.fq
+S3_2.fq
+2018年 10月 26日 星期五 19:10:53 CST Tophat mapping done...
+Run_RNASeq_ref_pipe_v1.sh: line 146: [: too many arguments
+Tophat was done good
+#############################################################################################
+[32m##### Step_3: Reconstruct the transcripts #####[0m]
+#############################################################################################
+[32m The cufflinks has been installed and it's path is: /usr/local/bin/cufflinks [0m
+2018年 10月 26日 星期五 19:10:53 CST Start reconstruct each transcripts
+2018年 10月 26日 星期五 19:11:30 CST Cufflinks assembly done...
+Run_RNASeq_ref_pipe_v1.sh: line 175: [: too many arguments
+Cufflinks was done good
+
+[Fri Oct 26 19:11:30 2018] Beginning transcriptome assembly merge
+-------------------------------------------
+
+[Fri Oct 26 19:11:30 2018] Preparing output location ./merged_asm/
+[Fri Oct 26 19:11:30 2018] Converting GTF files to SAM
+[19:11:30] Loading reference annotation.
+[19:11:30] Loading reference annotation.
+[19:11:30] Loading reference annotation.
+[19:11:30] Loading reference annotation.
+[19:11:30] Loading reference annotation.
+[19:11:30] Loading reference annotation.
+[Fri Oct 26 19:11:30 2018] Quantitating transcripts
+Warning: Could not connect to update server to verify current version. Please check at the Cufflinks website (http://cufflinks.cbcb.umd.edu).
+Command line:
+cufflinks -o ./merged_asm/ -F 0.05 -g test.genome.gtf -q --overhang-tolerance 200 --library-type=transfrags -A 0.0 --min-frags-per-transfrag 0 --no-5-extend -p 15 ./merged_asm/tmp/mergeSam_file6ZCDoh 
+[bam_header_read] EOF marker is absent. The input is probably truncated.
+[bam_header_read] invalid BAM binary header (this is not a BAM file).
+File ./merged_asm/tmp/mergeSam_file6ZCDoh doesn't appear to be a valid BAM file, trying SAM...
+[19:11:31] Loading reference annotation.
+[19:11:31] Inspecting reads and determining fragment length distribution.
+Processed 90 loci.                          
+> Map Properties:
+>	Normalized Map Mass: 627.00
+>	Raw Map Mass: 627.00
+>	Fragment Length Distribution: Truncated Gaussian (default)
+>	              Default Mean: 200
+>	           Default Std Dev: 80
+[19:11:31] Assembling transcripts and estimating abundances.
+Processed 90 loci.                          
+[Fri Oct 26 19:11:31 2018] Comparing against reference file test.genome.gtf
+Warning: Could not connect to update server to verify current version. Please check at the Cufflinks website (http://cufflinks.cbcb.umd.edu).
+[Fri Oct 26 19:11:31 2018] Comparing against reference file test.genome.gtf
+Warning: Could not connect to update server to verify current version. Please check at the Cufflinks website (http://cufflinks.cbcb.umd.edu).
+2018年 10月 26日 星期五 19:11:32 CST Cuffmerge done...
+#############################################################################################
+[32m##### Step_4: Quantify the transcripts #####[0m]
+#############################################################################################
+[32m The cuffquant has been installed and it's path is: /usr/local/bin/cuffquant [0m
+2018年 10月 26日 星期五 19:11:32 CST Start quantify each transcripts
+2018年 10月 26日 星期五 19:11:44 CST Cuffquant quantify done...
+Run_RNASeq_ref_pipe_v1.sh: line 212: [: too many arguments
+Cuffquant was done good
+#############################################################################################
+[32m##### Step_5: Get read count of every gene #####[0m]
+#############################################################################################
+[32m The htseq-count has been installed and it's path is: /usr/bin/htseq-count [0m
+2018年 10月 26日 星期五 19:11:44 CST Start get read count of every gene
+2018年 10月 26日 星期五 19:11:59 CST htseq-count done...
+Run_RNASeq_ref_pipe_v1.sh: line 243: [: too many arguments
+HTSeq-count was done good
+#############################################################################################
+##### Congratulations, all tasks were finished, Run RNASeq_ref_pipe was done... #####
+#############################################################################################
