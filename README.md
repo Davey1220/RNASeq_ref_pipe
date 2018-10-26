@@ -1,5 +1,6 @@
 # RNASeq_ref_pipe
 Run RNASeq analysis with reference genome based on the Tophat-Cufflinks pipeline
+
 Usage:
 ---------------------------------------------------------------------------------------------------
 Filename:    Run_RNASeq_ref_pipe_v1.sh
@@ -20,7 +21,7 @@ If any changes are made to this script, please mail me a copy of the changes
 ---------------------------------------------------------------------------------------------------
 Version 1.0 2018/10/24
 
-# 1. input.txt, list the sample name and clean reads in each line, seperated by tab or space
+input.txt, list the sample name and clean reads in each line, seperated by tab or space
 sample1    sample1_R1.fq.gz   sample1_R2.fq.gz
 sample2    ample2_R1.fq.gz    sample2_R2.fq.gz
 sample3    sample3_R1.fq.gz   sample3_R3.fq.gz
