@@ -23,7 +23,7 @@ Version 1.0 2018/10/24
 
 # input.txt, list the sample name and clean reads in each line, seperated by tab or space
 sample1    sample1_R1.fq.gz   sample1_R2.fq.gz
-sample2    ample2_R1.fq.gz    sample2_R2.fq.gz
+sample2    sample2_R1.fq.gz   sample2_R2.fq.gz
 sample3    sample3_R1.fq.gz   sample3_R3.fq.gz
 
 OPTIONS:
